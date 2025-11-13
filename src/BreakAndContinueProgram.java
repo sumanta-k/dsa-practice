@@ -8,17 +8,19 @@ public class BreakAndContinueProgram {
 
         /* waiter will ask only 3 times , what's your order sir/mam */
 
-        System.out.print("What is your order ? ");
-        String userOrder = input.next();
-        for( int i = 0 ; i < 3 ; i++){
-
-            System.out.println("Waiter is asking for the " + i + " time");
-
-            if(! userOrder.equals( userOrderShouldNotBe) ){
-                System.out.println("User has ordered "+ userOrder);
+        for( int i = 1 ; i < 3 ; i++) {
+            System.out.print("What is your order ? ");
+            String userOrder = input.next();
+                System.out.println("Waiter is asking for the " + i + " time");
+            /* if user has ordered "biriyani" , then it won't execute */
+                if (!userOrder.equals(userOrderShouldNotBe)) {
+                    System.out.println("User has ordered " + userOrder);
+                    break;
+                }else{
+                    System.out.println("Sorry user we don't serve "+ userOrderShouldNotBe);
+                    continue;
+                }
             }
-            /* otherwise , if user has ordered "biriyani" , then */
-        }
 
 
     }
