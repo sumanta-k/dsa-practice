@@ -7,5 +7,15 @@ public class BreakAndContinue {
             }
             System.out.println(i);
         }
+
+        /* continue statement , when to use : when you don't want to execute a specific program for specific case , but you do want to execute for others , in that case you can use "continue" */
+
+        for(int i = 0; i < 10 ; i++){
+            if ( i == 3){
+                continue;
+            }
+            /* otherwise  do this */
+            System.out.println(i + " is printed.");
+        }
     }
 }
